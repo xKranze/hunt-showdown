@@ -1,5 +1,13 @@
 body {
-    background: url(./HSbackground.jpg);
+    background-image: url(./HSbackground.jpg);
+    /* Full height */
+    height: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+
     background-position: center;
     background-size: cover;
 }
@@ -12,14 +20,15 @@ h1 {
     padding-left: 8%;
     margin-bottom: 4%;
     padding-bottom: 2%;
-    background-color: darkred;
-    border: solid
+    background: linear-gradient(45deg,rgb(184, 25, 25),rgb(70, 11, 11));
+    border: solid;
+
 }
 
 .hero {
     display: flex;
     margin-bottom: 20%;
-    padding-bottom:  20%;
+    padding-bottom: 20%;
 
 }
 
@@ -29,13 +38,19 @@ h1 {
     align-items: center;
     justify-content: space-evenly;
     margin-bottom: 10%;
+   
 
 }
 
 .links a {
     font-size: 30px;
-    color: rgb(238, 161, 161);
+    color: rgb(240, 141, 141);
     padding-bottom: 10%;
+    text-decoration: none;
+   
+    
+
+
 }
 
 .logo {
@@ -47,14 +62,54 @@ h1 {
 
 .headers {
     color: white;
-    margin-top: 20%;
+    margin-top: 10%;
     font-size: 30px;
+    padding: 10;
+    display: grid;
+    /* play with these settings, grid-auto-flow changes conten arragements to side by side inline with eeach other instad of block style?*/
+    /* grid-auto-flow: column; */
+    grid-column-gap: 10px;
+    grid-auto-columns: auto;
+
+
 }
-img{
-    width: 500px;
+
+img {
+    width: 450px;
+    box-shadow: 0 5px 20 red;
 }
 
 
+.sidebar {
+    background-color: white;
+    float: left;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 20px 20px red;
+    height: 100vh;
+    grid-auto-columns: auto;
+   
+}
+
+.sidebar a {
+
+    display: block;
+    text-decoration: none;
+    padding-bottom: 14px;
+    font-size:18px;
+    padding:14px 25px;
+    background: linear-gradient(45deg, orange,red);
+} 
+
+.sidebar img{
+    width: 150px;
+    padding: 25px 25px;
+    border: 20px solid red;
+    margin: 25px 25px;
+    box-shadow: 0 5px 10px black;
+    margin-bottom: 50px;
+
+}
 a:hover {
     color: rgb(230, 18, 18);
     transition: 1s;
@@ -63,7 +118,8 @@ a:hover {
 @media screen and (max-width: 768px) {
 
     header,
-    main {
+    main,
+    .headers {
         flex-direction: column;
     }
 }
